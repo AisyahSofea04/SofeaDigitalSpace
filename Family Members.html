@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sofea'sFamily</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+
+    #button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+    .button {
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: blanchedalmond;
+        border-radius: 10px;
+      }
+
+    .button:hover {
+        background-color: rgb(205, 188, 162);
+    }
+
+
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif; margin:0;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+
+        .slideshow-container img {
+         max-width: 600px; 
+         height: auto;
+         margin: auto; 
+        display: block;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        
+        .text {
+          color: #f2f2f2;
+          font-family:'Courier New', Courier, monospace;
+          font-size: 20px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 75px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+          from {opacity: .4;} 
+          to {opacity: 1;}
+        }
+
+        body {
+          background-color: rgb(169, 105, 38);
+          padding: 20px;
+        }
+
+        h1 {
+          font-family: 'Segoe UI';
+          color: rgb(97, 77, 50);
+          text-align: center;
+          background-color: rgb(218, 181, 133);
+        }
+
+        h6 {
+          text-align: center;
+          font-family: Cambria;
+          font-size: 15px;
+          max-width: 650px;
+          margin: auto;          
+          line-height: 1.5;
+          color: #bbbbbb;
+        }
+      
+        .container {
+            position: relative;
+            width: 300px;
+        }
+        
+        .image {
+        opacity: 1;
+        display: block;
+        width: 300px;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        margin: 50px;
+        }
+        
+        .container:hover .image {
+        opacity: 0.3;
+        }
+
+        .container:hover .middle{
+            opacity: 1;
+        }
+
+        .overlay-text {
+            color: wheat;
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        hr.new3 {
+            border-top: 1px dotted rgb(227, 231, 189);
+            
+        }
+
+        .section-container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .section-container img {
+            width: 320px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .section-container .text-content {
+            max-width: 600px;
+        }
+
+        @media (max-width: 768px) {
+            .section-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section-container img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+
+  <div id="button-container">
+    <a href="Home.html" target="_blank">
+      <button class="button"> HOME 🏠︎  </button>
+    </a>
+    <a href="Biodata.html">
+      <button class="button"> MY BIODATA *ੈ✩‧₊˚ </button>
+      </a>
+      <a href="Cat.html">
+        <button class="button"> CATS GALLERY ฅ^•ﻌ•^ฅ</button>
+      </a>
+      <a href="Fellow Friends.html" target="_blank">
+        <button class="button"> FELLOW FRIENDS 𖨆♡𖨆𖨆♡𖨆 </button>
+      </a>
+      <a href="Send Message.html" target="_blank">
+        <button class="button"> CONTACT ME જ⁀➴✉ </button>
+      </a>
+    </div>
+    
+    <br>
+    <h1> MEET MY FAMILY MEMBERS ⋆⭒𖠋♡𖠋⋆⋆ </h1>
+
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="C:\Users\user\Desktop\imd 317\FAMILY 1.jpg" style="width:370px; height:auto; margin: auto; display: block;">
+            <div class="text"> Holiday at Terengganu </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="C:\Users\user\Desktop\imd 317\FAMILY 2.jpg" style="width:370px; height:auto; margin: auto; display: block;">
+            <div class="text"> Eid Mubarak Celebration </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="C:\Users\user\Desktop\imd 317\FAMILY 4.jpg" style="width:370px; height:auto; margin: auto; display: block;">
+            <div class="text"> Dinner Time </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="C:\Users\user\Desktop\imd 317\FAMILY 3.jpg" style="width:370px; height:auto; margin: auto; display: block;">
+            <div class="text"> My brother convocations </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="C:\Users\user\Desktop\imd 317\FAMILY.jpg" style="width:370px; height:auto; margin: auto; display: block;">
+            <div class="text"> Eid Mubarak Celebration </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="C:\Users\user\Desktop\imd 317\FAMILY 5.jpg" style="width:370px; height:auto; margin: auto; display: block;">
+          <div class="text"> My bro fiance </div>
+      </div>
+
+        <!-- Navigation -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <br>
+
+    <!-- Dots -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1;}    
+            if (n < 1) {slideIndex = slides.length;}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</div>
+</div>
+<br>
+<h6> As the youngest in my family, I’ve always cherished the love and support from those around me. My family has been my backbone, their unwavering presence a source of strength and comfort. They have guided me through challenges, celebrated my successes, and reminded me of my worth even in difficult times. Their unconditional love teaches me the importance of standing together and lifting each other up.</h6>
+<br>
+<hr class="new3">
+<section class="section-container">
+        <img src="C:\Users\user\Desktop\imd 317\AYAH.jpg" alt="Ayah">
+        <div class="text-content">
+            <u><h2> AYAH </h2></u>
+            <p> Name : Mohd Shafie bin Yacob </p>
+            <p> Age : 50 Year </p>
+            <p> Birth of Date : 03<sup>th </sup>12 1975</p>
+            <p> Hobbies : Diving and go to Johor Premium Outlet </p>
+            <p> Job : Administrative Assistant </p>
+            <p> Favourite Drink: Iced Lemon </p>
+            <p> Favourite food : </p>
+            <ol>
+            <li> Asam pedas </li>
+            <br>
+            <li> Ikan Siakap Sweet Sour </li>
+            </ol>
+            <p> Personality : </p>
+            <ul>
+              <li> Hardworking </li>
+              <br>
+              <li> Protective </li>
+              <br>
+              <li> Responsible </li>
+            </ul>
+        </div>
+    </section>
+    <hr class="new3">
+    <section class="section-container">
+      <img src="C:\Users\user\Desktop\imd 317\IBU.jpg" alt="Ibu">
+      <div class="text-content">
+          <u><h2> IBU </h2></u>
+          <p> Name : Sariza binti Masran </p>
+          <p> Age : 49 Year </p>
+          <p> Birth of Date : 07<sup>th </sup>09 1976</p>
+          <p> Hobbies : Cooking and online shopping </p>
+          <p> Job : Housewife </p>
+          <p> Favourite Drink: Spanish Latte </p>
+          <p> Favourite Food : </p>
+          <ol>
+            <li> Banana Split </li>
+            <br>
+            <li> Mushroom Soup </li>
+          </ol>
+          <p> Personality : </p>
+          <ul>
+            <li> Loving </li>
+            <br>
+            <li> Supportive </li>
+            <br>
+            <li> Strong </li>
+          </ul>
+      </div>
+  </section>
+  <hr class="new3">
+  <section class="section-container">
+    <img src="C:\Users\user\Desktop\imd 317\ALONG.jpg" alt="Along">
+    <div class="text-content">
+        <u><h2> ALONG </h2></u>
+        <p> Name : Muhammad Shazrul Haziq bin Mohd Shafie </p>
+        <p> Age : 26 Year </p>
+        <p> Birth of Date : 15<sup>th </sup>09 1999</p>
+        <p> Hobbies : Playing badminton and playing mobile games </p>
+        <p> Job : Civil Engineering </p>
+        <p> Favourite Drink : Sky Juice </p>
+          <p> Favourite Food : </p>
+          <ol>
+            <li> Pizza </li>
+            <br>
+            <li> Fried Rice </li>
+          </ol>
+          <p> Personality : </p>
+        <ul>
+          <li> Caring </li>
+          <br>
+          <li> Protective </li>
+          <br>
+          <li> Calm </li>
+        </ul>
+    </div>
+  </section>
+  <hr>
+  <section class="section-container">
+    <img src="C:\Users\user\Desktop\imd 317\ANGAH.jpg" alt="Angah">
+    <div class="text-content">
+        <u><h2> ANGAH </h2></u>
+        <p> Name : Muhammad Shazrie Aiman bin Mohd Shafie </p>
+        <p> Age : 23 Year </p>
+        <p> Birth of Date: 28<sup>th </sup>08 2002</p>
+        <p> Hobbies : Buy zus coffee and playing mobile games </p>
+        <p> Job : Surveyor </p>
+        <p> Favourite Drink : Spanish Latte </p>
+          <p> Favourite Food : Iced Lime Syrup</p>
+          <ol>
+            <li> Nasi Lemak </li>
+            <br>
+            <li> Sambal Chicken </li>
+          </ol>
+          <p> Personality : </p>
+        <ul>
+          <li> Responsible </li>
+          <br>
+          <li> Patient </li>
+          <br>
+          <li> Kind-hearted </li>
+        </ul>
+    </div>
+  </section>
+</body>
+</html>
