@@ -64,19 +64,24 @@
         border: solid black;
     }
 
-    table, th, td {
-        border: 2px solid blueviolet;
-    }
-
-    table {
+    table{
+        border: 1px solid rgb(0, 0, 0);
         border-collapse: collapse;
         width: 500px;
+        height: 190px;
+        overflow: hidden;
+        margin-top: -90px;
+    }
+    
+    th {
+      background-color: rgb(72, 157, 163);
     }
 
     tr {
         text-align: center;
         font-family: Verdana;
         font-size: 16px;
+        background-color: aliceblue;
     }
 
     td {
@@ -93,12 +98,9 @@
 
     .center {
         text-align: center;
+        
     }
    
-   hr {
-        color: blue;
-   }
-
    footer {
     background-color: rgb(214, 207, 207);
     padding: 4px;
@@ -110,7 +112,7 @@
     font-size: 10px;
     margin-top: 20px;
   }
-
+     
   .container {
     position: relative;
     width: 70%;
@@ -149,15 +151,17 @@
 .image {
   display: block;
   width: 80%;
+  padding-left: 70px;
   height: auto;
   margin-right: 0%;
-  margin-left: 30%;
+  margin-left: 40%;
 }
+
 
 </style>
 <body>
     <div id="button-container">
-        <a href="index.html">
+        <a href="Home.html">
           <button class="button"> HOME 🏠︎ </button>
         </a>
         <a href="Family Members.html">
@@ -193,7 +197,7 @@
 <p><b> Favourite drink: </b> Green Tea and Spanish Latte</p> 
 <p><b> Favourite quotes: </b></p> 
 <p><i>Don't ruin a good day by thinking about a bad yesterday. Let it go and enjoy the moment</i></p> 
-
+<p><b> These are my soft skills and hard skills: </b></p>
 
 <table>
     <table border="8" align="center" width="100" length="60">
@@ -214,19 +218,26 @@
     <td>Cooking</td>
   </tr>
 </table>
+<br>
 <hr>
+
 <b><h3> My academic history: </h3></b>
+<section class="section-container">
 <div class="row" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; ">
 <div class="column">
   <div class="center">
 <div class="container">
-  <img src="SCHOOL 1.jpg" alt="School" class="image">
+  <img src="SCHOOL 1.jpg" alt="School" class="image" style="width:370px; height: 300px; margin-left: -9%; " >
   <div class="overlay">
     <div class="text"> SK Sinar Bahagia </div>
   </div>
 </div>
 </div>
-    <br>
+<p><i> Student | 2011 - 2016 </i></p>
+<p> - Ujian Pencapaian Sekolah Rendah (UPSR) </p>
+</section>
+<br>
+<section class="section-container">
 <div class="column">
 <div class="container">
   <img src="SCHOOL 2.jpg" alt="School" class="image" style="width:440px; height: 370px;">
@@ -236,14 +247,18 @@
 </div>
 </div>
 </div>
-</div>
+<p><i> Student | 2017- 2022</i></p>
+<p> - Pentaksiran Tingkatan Tiga (PT3) </p>
+<p> - Sijil Pelajaran Malaysia (SPM) </p>
+<p> -  Science Computer and Account for elective subject </p>
+</section>
 <hr>
-    <br>
+<br>
 <b><h3> My curriculum at UiTM Johor Branch:  </h3></b>
 <div class = "center">
 <img src="ALFALAH LOGO.png" class="center" width= "175" usemap="#workmap">
 <map name="workmap">
-  <area shape="default" alt="ALFALAH" href="https://www.instagram.com/alfalahuitmj?igsh=dzA4ZHlqdXI1Mzh1" target="_blank">
+  <area shape="default" alt="Curriculum" href="https://www.instagram.com/alfalahuitmj?igsh=dzA4ZHlqdXI1Mzh1" target="_blank">
 </map>
 <h4> Kelab Al-Falah </h4>
 <i> Ketua Biro Kebajikan dan Ekonomi </i>
@@ -254,10 +269,7 @@
 
 <b><h3> My work history: </h3></b>
 <div class = "center">
-<img src="PANASONIC.png" usemap="#workmap">
-  <map name="workmap">
-    <area shape="default" alt="Organization" href="https://snm.my.panasonic.com/about-us" target="_blank">
-  </map>
+  <a href="https://snm.my.panasonic.com/about-us" target="_blank"><img src="PANASONIC.png"></a>
 <h4> Panasonic System Networks Malaysia Sdn. Bhd. </h4>
 <i> Production Operator | May 2022 - Aug 2022 </i>
 <p> - I manage to follow guidelines and procedures for operating machinery and making products safely </p>
@@ -265,10 +277,7 @@
 </div>
 
 <div class = "center">
-<img src="MPKU LOGO.png" width="250" usemap="#workmap">
-  <map name="workmap">
-    <area shape="default" alt="Organization" href="https://mpkulai.gov.my/" target="_blank">
-  </map>
+  <a href="https://mpkulai.gov.my/" target="_blank"><img src="MPKU LOGO.png" width="250"></a>
 <h4> Majlis Perbandaran Kulai</h4>
 <i> Practical Student at Information Technology (IT) Department | 21 July 2024 - 12 September 2024 </i>
 <p> - I develop a methods to transfer files efficiently while maintaining their order and data handling skills </p>
