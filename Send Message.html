@@ -97,7 +97,26 @@
           <a href="https://www.instagram.com/aisyahsofe4/" class="fa fa-instagram" target="_blank"></a>
           <a href="https://snapchat.com/t/qcnGuIQy" class="fa fa-snapchat-ghost" target="_blank"></a>
           </div>
+            <br>
+            
+          <body onload="startTime()">
+            <script>
+            function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+          }
 
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+          }
+</script>
           <div class="gif-container">
             <img src="https://tenor.com/view/cat-sticker-line-sticker-bye-sticker-goodbye-sticker-cat-gif-26479343.gif" style="max-width: 400px; height: 400px;">
           </div>
