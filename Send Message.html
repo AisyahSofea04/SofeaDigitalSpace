@@ -108,21 +108,36 @@
           <div class="gif-container">
             <img src="https://tenor.com/view/cat-sticker-line-sticker-bye-sticker-goodbye-sticker-cat-gif-26479343.gif" style="max-width: 400px; height: 400px;">
           </div>
-    </body>
           <div id="time">Loading...</div>
 
-  <script>
-    function updateTime() {
+ <script>
+    function updateClock() {
       const now = new Date();
+      
+      // Format time
       const hours = String(now.getHours()).padStart(2, '0');
       const minutes = String(now.getMinutes()).padStart(2, '0');
       const seconds = String(now.getSeconds()).padStart(2, '0');
-      document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+      const timeString = `${hours}:${minutes}:${seconds}`;
+
+      // Update the clock
+      document.getElementById('clock').textContent = timeString;
+
+      // Change background based on time of day
+      if (now.getHours() >= 6 && now.getHours() < 18) {
+        // Daytime
+        document.body.style.backgroundColor = "#FFFAF0"; // Light color
+        document.body.style.color = "#333"; // Dark text
+      } else {
+        // Nighttime
+        document.body.style.backgroundColor = "#2C3E50"; // Dark color
+        document.body.style.color = "#FFF"; // Light text
+      }
     }
 
-    // Update the time every second
-    setInterval(updateTime, 1000);
-    // Initialize the time immediately
-    updateTime();
-</script>
+    // Update every second
+    setInterval(updateClock, 1000);
+    updateClock(); // Initialize immediately
+  </script>
+        </body>
 </html>
