@@ -108,10 +108,8 @@
           <div class="gif-container">
             <img src="https://tenor.com/view/cat-sticker-line-sticker-bye-sticker-goodbye-sticker-cat-gif-26479343.gif" style="max-width: 400px; height: 400px;">
           </div>
-          <div id="time">Loading...</div>
-
- <script>
-    function updateClock() {
+         <script>
+      function updateClock() {
       const now = new Date();
       
       // Format time
@@ -120,8 +118,12 @@
       const seconds = String(now.getSeconds()).padStart(2, '0');
       const timeString = `${hours}:${minutes}:${seconds}`;
 
-      // Update the clock
+      // Format date
+      const dateString = now.toDateString();
+
+      // Update the clock and date
       document.getElementById('clock').textContent = timeString;
+      document.getElementById('date').textContent = dateString;
 
       // Change background based on time of day
       if (now.getHours() >= 6 && now.getHours() < 18) {
