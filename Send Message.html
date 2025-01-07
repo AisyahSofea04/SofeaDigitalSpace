@@ -77,6 +77,11 @@
           height: auto;
         }
 
+        #time {
+          font-size: 2em;
+          color: #333;
+        }
+
         </style>
 
         <body>
@@ -99,23 +104,21 @@
           </div>
             <br>
             
-          <body onload="startTime()">
-            <script>
-            function startTime() {
-            const today = new Date();
-            let h = today.getHours();
-            let m = today.getMinutes();
-            let s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
-            setTimeout(startTime, 1000);
-          }
+          <div id="time">Loading...</div>
 
-            function checkTime(i) {
-              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-            return i;
-          }
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Update the time every second
+    setInterval(updateTime, 1000);
+    // Initialize the time immediately
+    updateTime();
 </script>
           <div class="gif-container">
             <img src="https://tenor.com/view/cat-sticker-line-sticker-bye-sticker-goodbye-sticker-cat-gif-26479343.gif" style="max-width: 400px; height: 400px;">
