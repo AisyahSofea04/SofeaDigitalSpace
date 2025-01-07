@@ -77,13 +77,13 @@
           height: auto;
         }
 
-        .clock {
+    .clock {
       font-family: candara;
       font-size: 3em;
       text-align: center;
       margin-top: 30px;
       color: #fff;
-      background: linear-gradient(45deg, #ff80ab, rgb(219, 157, 219));
+      background: linear-gradient(45deg, #93dc8b, rgb(221, 227, 179));
       border-radius: 20px;
       padding: 20px;
       width: 250px;
@@ -93,7 +93,6 @@
       animation: pulse 1.5s infinite;
     }
 
-    /* Animation for clock */
     @keyframes pulse {
       0% {
         transform: scale(1);
@@ -106,7 +105,6 @@
       }
     }
 
-    /* Digital clock style */
     .clock span {
       display: inline-block;
       padding: 5px;
@@ -117,7 +115,7 @@
       color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-
+    
         </style>
 
         <body>
@@ -125,9 +123,9 @@
 
             <h1> SEND MESSAGE TO SOFEA ⸜(｡˃ ᵕ ˂ )⸝♡ </h1>
               <div class="scroll-container">
-                <img src="SOFEA SCROLL 1.jpg" alt="me" width="585px" height="400px">
-                <img src="SOFEA SCROLL 2.jpg" alt="me" width="585" height="400px">
-                <img src="SOFEA SCROLL 3.jpg" alt="me" width="585" height="400px">
+                <img src="C:\Users\user\Desktop\imd 317\SOFEA SCROLL 1.jpg" alt="me" width="585px" height="400px">
+                <img src="C:\Users\user\Desktop\imd 317\SOFEA SCROLL 2.jpg" alt="Forest" width="585" height="400px">
+                <img src="C:\Users\user\Desktop\imd 317\SOFEA SCROLL 3.jpg" alt="Forest" width="585" height="400px">
               </div>
 
           <p> If you have anything that you want to share, I ready to spend my time reply to your email without any thoughts. <a href="mailto:asofeaaa14@gmail.com" ><br>Email me!</a></p>
@@ -138,28 +136,26 @@
           <a href="https://www.instagram.com/aisyahsofe4/" class="fa fa-instagram" target="_blank"></a>
           <a href="https://snapchat.com/t/qcnGuIQy" class="fa fa-snapchat-ghost" target="_blank"></a>
           </div>
-            <br>
-            <div id="clock" class="clock"></div>
-
-            <script>
+          
+          <h2> Malaysia time: </h2>
+          <div id="clock" class="clock"></div>
+          
+          <script>
             function updateClock() {
-  const clock = document.getElementById('clock');
-  const now = new Date();
-  const hours = now.getHours().toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
-  const timeString = <span>${hours}</span>:<span>${minutes}</span>:<span>${seconds}</span>;
-  clock.innerHTML = timeString;
-}
-
-setInterval(updateClock, 1000);
-updateClock(); // Initialize clock immediately
-
-            </script>
+              const clock = document.getElementById('clock');
+              const now = new Date();
+              const hours = now.getHours().toString().padStart(2, '0');
+              const minutes = now.getMinutes().toString().padStart(2, '0');
+              const seconds = now.getSeconds().toString().padStart(2, '0');
+              clock.innerHTML = `<span>${hours}</span>:<span>${minutes}</span>:<span>${seconds}</span>`;
+            }
+        
+            setInterval(updateClock, 1000);
+            updateClock();
+          </script>
 
           <div class="gif-container">
             <img src="https://tenor.com/view/cat-sticker-line-sticker-bye-sticker-goodbye-sticker-cat-gif-26479343.gif" style="max-width: 400px; height: 400px;">
           </div>
-         
-        </body>
+    </body>
 </html>
