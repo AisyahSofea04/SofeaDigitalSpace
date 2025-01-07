@@ -105,42 +105,42 @@
           </div>
             <br>
 
-                     <script>
-      function updateClock() {
-      const now = new Date();
+          <script>
+            function updateClock() {
+            const now = new Date();
       
-      // Format time
-      const hours = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      const timeString = `${hours}:${minutes}:${seconds}`;
+          // Format time
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
 
-      // Format date
-      const dateString = now.toDateString();
+          // Format date
+            const dateString = now.toDateString();
 
-      // Update the clock and date
-      document.getElementById('clock').textContent = timeString;
-      document.getElementById('date').textContent = dateString;
+        // Update the clock and date
+            document.getElementById('clock').textContent = timeString;
+            document.getElementById('date').textContent = dateString;
 
-      // Change background based on time of day
-      if (now.getHours() >= 6 && now.getHours() < 18) {
+        // Change background based on time of day
+            if (now.getHours() >= 6 && now.getHours() < 18) {
         // Daytime
-        document.body.style.backgroundColor = "#FFFAF0"; // Light color
-        document.body.style.color = "#333"; // Dark text
-      } else {
+            document.body.style.backgroundColor = "#FFFAF0"; // Light color
+            document.body.style.color = "#333"; // Dark text
+            } else {
         // Nighttime
-        document.body.style.backgroundColor = "#2C3E50"; // Dark color
-        document.body.style.color = "#FFF"; // Light text
-      }
-    }
+            document.body.style.backgroundColor = "#2C3E50"; // Dark color
+            document.body.style.color = "#FFF"; // Light text
+            }
+          }
 
-    // Update every second
-    setInterval(updateClock, 1000);
-    updateClock(); // Initialize immediately
+        // Update every second
+            setInterval(updateClock, 1000);
+            updateClock(); // Initialize immediately
+                     </script>
           <br>
           <div class="gif-container">
             <img src="https://tenor.com/view/cat-sticker-line-sticker-bye-sticker-goodbye-sticker-cat-gif-26479343.gif" style="max-width: 400px; height: 400px;">
           </div>
-  </script>
         </body>
 </html>
