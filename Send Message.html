@@ -77,11 +77,46 @@
           height: auto;
         }
 
-        #time {
-          font-size: 2em;
-          color: #333;
-          text-align: center;
-        }
+        .clock {
+      font-family: candara;
+      font-size: 3em;
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+      background: linear-gradient(45deg, #ff80ab, rgb(219, 157, 219));
+      border-radius: 20px;
+      padding: 20px;
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Animation for clock */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Digital clock style */
+    .clock span {
+      display: inline-block;
+      padding: 5px;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.2);
+      margin: 2px;
+      font-size: 1.2em;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
         </style>
 
@@ -104,46 +139,27 @@
           <a href="https://snapchat.com/t/qcnGuIQy" class="fa fa-snapchat-ghost" target="_blank"></a>
           </div>
             <br>
+            <div id="clock" class="clock"></div>
+
+            <script>
+            function updateClock() {
+  const clock = document.getElementById('clock');
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  const timeString = <span>${hours}</span>:<span>${minutes}</span>:<span>${seconds}</span>;
+  clock.innerHTML = timeString;
+}
+
+setInterval(updateClock, 1000);
+updateClock(); // Initialize clock immediately
+
+            </script>
 
           <div class="gif-container">
             <img src="https://tenor.com/view/cat-sticker-line-sticker-bye-sticker-goodbye-sticker-cat-gif-26479343.gif" style="max-width: 400px; height: 400px;">
           </div>
-
-            <div id="time">Loading...</div>
-            
-          <script>
-            
-            function updateClock() {
-            const now = new Date();
-      
-          // Format time
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            const timeString = `${hours}:${minutes}:${seconds}`;
-
-          // Format date
-            const dateString = now.toDateString();
-
-        // Update the clock and date
-            document.getElementById('clock').textContent = timeString;
-            document.getElementById('date').textContent = dateString;
-
-        // Change background based on time of day
-            if (now.getHours() >= 6 && now.getHours() < 18) {
-        // Daytime
-            document.body.style.backgroundColor = "#FFFAF0"; // Light color
-            document.body.style.color = "#333"; // Dark text
-            } else {
-        // Nighttime
-            document.body.style.backgroundColor = "#2C3E50"; // Dark color
-            document.body.style.color = "#FFF"; // Light text
-            }
-          }
-
-        // Update every second
-            setInterval(updateClock, 1000);
-            updateClock(); // Initialize immediately
-          </script>
+         
         </body>
 </html>
